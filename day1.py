@@ -9,6 +9,20 @@ def count_all(entry):
             count = count - 1
     return count
     
-result = count_all(entry)
 
-print(result)
+def first_basement_position(entry):
+    position = 0
+    floor = 0
+    for x in entry:
+        position += 1
+        if x == "(":
+            floor += 1
+        elif x == ")":
+            floor -= 1
+        if floor == -1:
+            return position
+    return None
+
+count = count_all(entry) #74
+fbp = first_basement_position(entry); #1795
+print(fbp)
