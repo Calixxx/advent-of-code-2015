@@ -23,9 +23,12 @@ def calculate_dimensions_for_ruban(array):
     return feet
 
 if __name__ == "__main__":
-    sum = 0
+    paper  = 0
+    ribbon  = 0
     entry = split_big_entry_by_n(big_entry)
     for elt in entry:
-        sum += calculate_dimensions_for_ruban(split_entry_by_x(elt)) 
-    print(sum) #3842356
+        paper += calculate_suface(split_entry_by_x(elt))
+        ribbon += calculate_dimensions_for_ruban(split_entry_by_x(elt)) 
+    print(paper) #1606483
+    print(ribbon) #3842356
 
