@@ -9,7 +9,6 @@ def count_all(entry):
             count = count - 1
     return count
     
-
 def first_basement_position(entry):
     position = 0
     floor = 0
@@ -23,6 +22,7 @@ def first_basement_position(entry):
             return position
     return None
 
-count = count_all(entry) #74
-fbp = first_basement_position(entry); #1795
-print(fbp)
+if __name__ == "__main__":
+    count = count_all(entry) #74
+    fbp = first_basement_position(entry); #1795
+    print(fbp)
